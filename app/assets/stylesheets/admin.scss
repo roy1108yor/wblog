@@ -21,6 +21,22 @@
   }
 }
 
+body.admin-page:not(.app-loaded) {
+  main {
+    background-color: #f0fff0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app-main {
+  background-color: #f0fff0;
+  min-height: calc(100vh - 57px);
+  display: flex;
+  flex-direction: column;
+}
+
 .login-box {
   margin: 7% auto;
 }
