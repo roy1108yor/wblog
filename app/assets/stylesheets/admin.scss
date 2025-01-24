@@ -23,7 +23,7 @@
 
 body.admin-page:not(.app-loaded) {
   main {
-    background-color: #f0fff0;
+    background-color: red;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body.admin-page:not(.app-loaded) {
 }
 
 .app-main {
-  background-color: #f0fff0;
+  background-color: red;
   min-height: calc(100vh - 57px);
   display: flex;
   flex-direction: column;
