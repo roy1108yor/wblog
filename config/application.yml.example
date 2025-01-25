@@ -22,7 +22,7 @@ LOCALE: 'zh-CN'
 REDIS_NAMESPACE: 'wblog'
 
 # META description for SEO
-INTRODUCE: '这是李亚飞的博客, 李亚飞是暂住在深圳的一名 Ruby 程序员, 这里是关于技术, 创业, 生活的思考'
+INTRODUCE: '这是liyafei的博客, liyafei是暂住在深圳的一名 Ruby 程序员, 这里是关于技术, 创业, 生活的思考'
 
 #Website Address for footer display without http
 SITE_ADDRESS: 'yafeilee.com'
