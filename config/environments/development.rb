@@ -70,6 +70,7 @@ Rails.application.configure do
 
   # Allow all hosts in development
   config.hosts.clear
+  config.hosts << /.*/
 
   
 end
