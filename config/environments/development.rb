@@ -69,7 +69,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Allow all hosts in development
+  config.hosts << /.*/
   config.hosts.clear
-  
-  
 end
