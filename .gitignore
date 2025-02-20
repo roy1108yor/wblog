@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Clacky specific configurations
+.1024*
+!.1024
+.breakpoints
 
 # Ignore bundler config.
 /.bundle
@@ -18,9 +22,10 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development.
+# Ignore uploaded files in development and assets.
 /storage/*
 !/storage/.keep
+/public/storage
 
 /public/assets
 /public/uploads
@@ -46,11 +51,14 @@ yarn-debug.log*
 /config/mongoid.yml
 /config/database.yml
 /config/master.key
+/config/credentials/*.key
+/config/*.local.yml
 **.orig
 *.old
 *.bak
 *~
 .env
+.env.*
 .byebug_history
 .DS_Store
 
