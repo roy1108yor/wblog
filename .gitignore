@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Clacky specific ignores
+.1024*
+!.1024
+.breakpoints
 
 # Ignore bundler config.
 /.bundle
@@ -18,22 +22,28 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development and assets.
+# Ignore Rails specific files and directories
 /storage/*
 !/storage/.keep
 /public/storage
-
 /public/assets
 /public/uploads
+/config/master.key 
+/config/credentials/*.key
+.env*
+config/database.yml
+config/application.yml
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/*.yml
 
-/public/packs
-/public/packs-test
+# Ignore dependencies
 /node_modules
 /yarn-error.log
+vendor/bundle
+/public/packs
+/public/packs-test
 yarn-debug.log*
 .yarn-integrity
 
