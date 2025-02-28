@@ -3,8 +3,13 @@ turbo-frame#comment-frame
     .row.justify-content-center
       .col-12.col-lg-9
         - comment = @comment || Comment.new
-        = simple_form_for comment, url: blog_comments_path(post), remote: true do |f|
+        = simple_form_for comment, url: blog_comments_path(post), data: { turbo: true } do |f|
           = f.text_area :content, placeholder: t('comment_placeholder.content')
+          .markdown-tip.text-muted.small
+            i.fas.fa-markdown
+            |  支持Markdown语法 
+            a href="https://www.markdownguide.org/basic-syntax/" target="_blank" title="Markdown语法参考"
+              i.fas.fa-question-circle
           .row
             .col-12.col-lg-6
               = f.text_field :name, value: cookies[:name], placeholder: t('comment_placeholder.name')

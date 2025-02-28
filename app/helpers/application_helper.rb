@@ -57,4 +57,28 @@ module ApplicationHelper
 
     title.sub(q, "<em>#{q}</em>")
   end
+  
+  # Renders comment content as Markdown
+  def markdown_comment(content)
+    return "" if content.blank?
+    
+    options = {
+      autolink: true,
+      no_intra_emphasis: true,
+      fenced_code_blocks: true,
+      lax_html_blocks: true,
+      strikethrough: true,
+      tables: true,
+      superscript: true,
+      highlight: true,
+      disable_indented_code_blocks: true
+    }
+    
+    renderer = CodeHTML.new(hard_wrap: true, filter_html: true, safe_links_only: true)
+    markdown = Redcarpet::Markdown.new(renderer, options)
+    
+    # Sanitize and return HTML
+    sanitized_content = raw(markdown.render(content))
+    sanitized_content
+  end
 end
