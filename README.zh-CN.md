@@ -8,6 +8,23 @@ WBlog
 
 ~~现已全面支持 Ruby on Rails 6.1 版本!!!~~
 
+cursor ssh 
+jkdajkd
+dhkjhk
+duwiwuhdjd
+hdkjd
+dhaskjdwjijdj
+dhkdeuihdeh
+dhadjeuhudh
+dhkhdeuh
+sahuishw
+dhshdweuhyd
+dsajhdwuh
+dwsdhwew3u
+dhuhduwudw
+duihdue
+
+
 New: 现已经从 webpacker 升级至 jsbundling & cssbundling.
 
 New: 现已全面升级到 Ruby on Rails 7.0 版本！！！
