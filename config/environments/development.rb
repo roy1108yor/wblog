@@ -70,5 +70,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Allow all hosts in development environment
-  config.hosts << /.*/
+  # This enables the Clacky cloud development environment to properly access the application
+  config.hosts.clear
 end
