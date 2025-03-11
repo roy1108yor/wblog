@@ -59,7 +59,5 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  # Allow all hosts to access the application in development environment
-  config.hosts << /.*/
 
 end
