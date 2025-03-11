@@ -1,0 +1,155 @@
+.changelog-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  
+  .changelog-list {
+    position: relative;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 2px;
+      background-color: #e9ecef;
+      display: none;
+      
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+  
+  .changelog-item {
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (min-width: 768px) {
+      margin-left: 40px;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #007bff;
+        left: -26px;
+        top: 24px;
+        z-index: 1;
+      }
+    }
+    
+    .card-header {
+      background-color: rgba(0, 0, 0, 0.02);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      
+      .card-title {
+        margin-bottom: 0;
+        font-size: 1.25rem;
+      }
+    }
+    
+    .version-badge {
+      background-color: #007bff;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      display: inline-block;
+    }
+    
+    .published-date {
+      color: #6c757d;
+      font-size: 0.9rem;
+      
+      i {
+        margin-right: 0.3rem;
+      }
+    }
+    
+    .changelog-content {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      
+      h3 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-weight: 600;
+      }
+      
+      ul {
+        padding-left: 1.5rem;
+        
+        li {
+          margin-bottom: 0.4rem;
+        }
+      }
+    }
+  }
+  
+  .no-changelog-message {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #6c757d;
+    
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Pagination styling
+.pagination {
+  margin-top: 2rem;
+  justify-content: center;
+  
+  .page-item {
+    .page-link {
+      color: #007bff;
+      
+      &:hover {
+        color: #0056b3;
+      }
+    }
+    
+    &.active .page-link {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .changelog-wrapper {
+    .changelog-item {
+      margin-bottom: 1.5rem;
+      
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        
+        .version-badge {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
