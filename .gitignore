@@ -66,3 +66,11 @@ yarn-debug.log*
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Clacky-specific entries
+config/database.yml
+config/application.yml
+log/*.log
+tmp/
+.env
+node_modules/
