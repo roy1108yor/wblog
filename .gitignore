@@ -49,28 +49,6 @@ yarn-debug.log*
 /public/assets/*
 /tags
 
-/config/application.yml
-/config/mongoid.yml
-/config/database.yml
-/config/master.key
-/config/credentials/*.key
-/config/*.local.yml
-**.orig
-*.old
-*.bak
-*~
-.env
-.env.*
-.byebug_history
-.DS_Store
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
-
-# Clacky-specific entries
-config/database.yml
-config/application.yml
-log/*.log
-tmp/
-.env
-node_modules/
