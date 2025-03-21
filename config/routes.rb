@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :changelogs, only: [:index]
 
   get '/about', to: 'home#about'
+  get '/landing', to: 'home#landing'
 
   namespace :admin do
     get 'login', to: 'sessions#new', as: :login

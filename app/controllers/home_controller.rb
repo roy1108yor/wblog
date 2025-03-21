@@ -6,4 +6,7 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def landing
+  end
 end

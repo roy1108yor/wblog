@@ -1,0 +1,210 @@
+- content_for(:title) do
+  | WBlog - 专业的博客系统
+- content_for(:main)
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    .container
+      a.navbar-brand href=root_path WBlog
+      button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+        span class="navbar-toggler-icon"
+      div class="collapse navbar-collapse" id="navbar-collapse"
+        ul.navbar-nav.ml-auto
+          li class="nav-item"
+            a.nav-link href="#features" 特点
+          li class="nav-item"
+            a.nav-link href="#philosophy" 设计理念
+          li class="nav-item"
+            a.nav-link href="#technology" 技术栈
+          li class="nav-item"
+            a.nav-link href="#start" 开始使用
+          li class="nav-item"
+            = link_to '进入博客', root_path, class: 'nav-link'
+
+  section.landing-hero
+    .container
+      .row.align-items-center.justify-content-between.py-5
+        .col-md-6.py-5
+          h1.display-4.font-weight-bold WBlog
+          p.lead.mb-4 一个简洁、强大、现代的开源博客系统
+          p.mb-4 WBlog是基于Ruby on Rails开发的开源博客系统，为个人博主和开发者提供了一个简单易用但功能丰富的写作平台。
+          .d-flex.flex-wrap
+            = link_to '开始使用', root_path, class: 'btn btn-primary btn-lg mr-3 mb-3'
+            a.btn.btn-outline-dark.btn-lg.mb-3 href="https://github.com/windy/wblog" target="_blank" 
+              i.fab.fa-github.mr-2
+              | GitHub
+
+        .col-md-5.d-none.d-md-block
+          img.img-fluid.rounded.shadow src=asset_path("logo.png") alt="WBlog Logo"
+
+  section#features.py-5
+    .container
+      h2.text-center.mb-5 特点功能
+      .row
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-pencil-alt.fa-3x.text-primary
+            h3 简洁写作
+            p 提供清爽直观的写作界面，支持Markdown语法，让你专注于内容创作而非繁琐的排版
+
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-mobile-alt.fa-3x.text-primary
+            h3 响应式设计
+            p 完美适配各种屏幕尺寸，无论在电脑、平板还是手机上，都能提供最佳的阅读体验
+
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-comments.fa-3x.text-primary
+            h3 互动功能
+            p 内置评论系统和点赞功能，增强读者与作者之间的互动，构建活跃的博客社区
+
+      .row.mt-4
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-tags.fa-3x.text-primary
+            h3 标签管理
+            p 通过标签系统有效组织和分类文章，让读者快速找到感兴趣的内容
+
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-lock.fa-3x.text-primary
+            h3 安全可靠
+            p 采用最佳安全实践，保护您的博客内容和用户数据安全
+
+        .col-md-4.mb-4
+          .feature-card.p-4.h-100.text-center
+            .mb-4
+              i.fas.fa-code.fa-3x.text-primary
+            h3 易于定制
+            p 开源代码，支持高度定制，满足不同博主的个性化需求
+
+  section#philosophy.py-5.bg-light
+    .container
+      .row.justify-content-center
+        .col-md-8.text-center
+          h2.mb-4 设计理念
+          p.lead 我们相信，优秀的博客平台应该回归内容本质，提供简洁而不简单的写作与阅读体验。
+
+      .row.mt-5
+        .col-md-6.mb-4
+          h4 简约主义
+          p WBlog遵循"少即是多"的设计原则，去除冗余功能，专注于提供流畅的写作和阅读体验。界面设计简洁明了，让用户可以将注意力集中在内容创作上。
+
+        .col-md-6.mb-4
+          h4 开放与分享
+          p 作为开源项目，WBlog鼓励社区贡献和创新。我们相信开放的生态系统能够促进技术进步，让更多人受益于优质的博客平台。
+
+      .row
+        .col-md-6.mb-4
+          h4 内容优先
+          p 在WBlog中，内容始终是第一位的。我们优化了文章展示方式，确保读者获得最佳阅读体验，同时为创作者提供有效的内容管理工具。
+
+        .col-md-6.mb-4
+          h4 持续改进
+          p WBlog不断吸收用户反馈，持续优化产品体验。我们相信小的改进积累起来会带来质的飞跃，让博客系统变得更加完善。
+
+  section#technology.py-5
+    .container
+      h2.text-center.mb-5 技术栈
+      .row.justify-content-center
+        .col-md-8
+          .technology-stack.p-4.rounded.shadow-sm
+            .row.text-center
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fas.fa-gem.fa-2x.text-danger
+                p Ruby
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fas.fa-subway.fa-2x.text-danger
+                p Rails
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fab.fa-bootstrap.fa-2x.text-primary
+                p Bootstrap
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fab.fa-sass.fa-2x.text-pink
+                p SASS
+
+            .row.text-center
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fab.fa-js.fa-2x.text-warning
+                p JavaScript
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fas.fa-database.fa-2x.text-info
+                p PostgreSQL
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fab.fa-github.fa-2x.text-dark
+                p Git
+
+              .col-6.col-md-3.mb-4
+                .tech-icon.mb-2
+                  i.fas.fa-cloud.fa-2x.text-info
+                p 云部署
+
+  section#start.py-5.bg-primary.text-white
+    .container.text-center
+      h2.mb-4 开始使用 WBlog
+      p.lead.mb-5 只需几个简单步骤，即可搭建属于你的专业博客平台
+      .row.justify-content-center
+        .col-md-8
+          .getting-started.bg-white.text-dark.p-4.rounded
+            ol.text-left.mb-4
+              li.mb-3 
+                strong 克隆仓库：
+                code.ml-2 git clone https://github.com/windy/wblog.git
+              li.mb-3 
+                strong 安装依赖：
+                code.ml-2 bundle install
+              li.mb-3 
+                strong 配置数据库：
+                code.ml-2 rails db:setup
+              li.mb-3 
+                strong 启动服务：
+                code.ml-2 rails server
+            .text-center.mt-4
+              a.btn.btn-lg.btn-primary href="https://github.com/windy/wblog" target="_blank"
+                i.fab.fa-github.mr-2
+                | 查看完整文档
+
+  section.py-5
+    .container.text-center
+      h2.mb-4 加入 WBlog 社区
+      p.lead.mb-5 与其他开发者和博主分享经验，共同改进 WBlog
+      .row.justify-content-center
+        .col-md-8
+          .community-links.d-flex.flex-wrap.justify-content-center
+            a.btn.btn-outline-dark.m-2 href="https://github.com/windy/wblog/issues" target="_blank"
+              i.fab.fa-github.mr-2
+              | 报告问题
+            a.btn.btn-outline-dark.m-2 href="https://github.com/windy/wblog/pulls" target="_blank"
+              i.fas.fa-code-branch.mr-2
+              | 贡献代码
+            = link_to root_path, class: 'btn btn-primary m-2' do
+              i.fas.fa-blog.mr-2
+              | 进入博客
+
+  footer.bg-dark.text-white.py-4
+    .container
+      .row.align-items-center
+        .col-md-6.text-center.text-md-left
+          p.mb-0 &copy; #{Time.now.year} WBlog - 开源博客系统
+        .col-md-6.text-center.text-md-right
+          .social-links
+            a.text-white.mx-2 href="https://github.com/windy/wblog" target="_blank"
+              i.fab.fa-github
+            a.text-white.mx-2 href="https://ruby-china.org" target="_blank"
+              i.fas.fa-gem
